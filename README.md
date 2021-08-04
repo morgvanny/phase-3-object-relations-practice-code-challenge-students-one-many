@@ -40,43 +40,18 @@ The starter code has migrations and models for the initial `Cohort` and `Student
 
 #### `students` Table
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>Column</th>
-    <th>Type</th>
-  </tr>
-  
-  <tr>
-    <td>name</td>
-    <td>string</td>
-  </tr>
-  <tr>
-    <td>age</td>
-    <td>integer</td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td>string</td>
-  </tr>
-</table>
+| Column | Type |
+| --- | --- |
+| name | string |
+| age | integer |
+| email | string |
 
 #### `cohorts` Table
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>Column</th>
-    <th>Type</th>
-  </tr>
-  
-  <tr>
-    <td>name</td>
-    <td>string</td>
-  </tr>
-  <tr>
-    <td>current_mod</td>
-    <td>integer</td>
-  </tr>
-</table>
+| Column | Type |
+| --- | --- |
+| name | string |
+| current_mod | integer |
 
 You will need to create a migration to establish the relationship between these two tables. You'll need to add one additional column to one of these existing tables to create the relationship. 
 
