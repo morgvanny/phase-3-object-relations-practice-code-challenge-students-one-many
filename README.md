@@ -30,30 +30,30 @@ We've provided you with a tool that you can use to test your code. To use it, ru
 
 Writing error-free code is more important than completing all of the deliverables listed - prioritize writing methods that work over writing more methods that don't work. You should test your code in the console as you write.
 
-Similarly, messy code that works is better than clean code that doesn't. First, prioritize getting things working. Then, if there is time at the end, refactor your code to adhere to best practices. 
+Similarly, messy code that works is better than clean code that doesn't. First, prioritize getting things working. Then, if there is time at the end, refactor your code to adhere to best practices.
 
 **Before you submit!** Save and run your code to verify that it works as you expect. If you have any methods that are not working yet, feel free to leave comments describing your progress.
 
 ## What You Already Have
 
-The starter code has migrations and models for the initial `Cohort` and `Student` models, and seed data for some `Cohort`s and `Student`s. The tables currently look like this: 
+The starter code has migrations and models for the initial `Cohort` and `Student` models, and seed data for some `Cohort`s and `Student`s. The tables currently look like this:
 
 #### `students` Table
 
-| Column | Type |
-| --- | --- |
-| name | string |
-| age | integer |
-| email | string |
+| Column | Type    |
+| ------ | ------- |
+| name   | string  |
+| age    | integer |
+| email  | string  |
 
 #### `cohorts` Table
 
-| Column | Type |
-| --- | --- |
-| name | string |
+| Column      | Type    |
+| ----------- | ------- |
+| name        | string  |
 | current_mod | integer |
 
-You will need to create a migration to establish the relationship between these two tables. You'll need to add one additional column to one of these existing tables to create the relationship. 
+You will need to create a migration to establish the relationship between these two tables. You'll need to add one additional column to one of these existing tables to create the relationship.
 
 **Remember**: a `Cohort` has many `Student`s and a `Student` belongs to a `Cohort`.
 
@@ -73,7 +73,7 @@ Before working on the rest of the deliverables, you will need to set up the migr
 
 Once you've updated the migrations, run `rake db:migrate` to run the migrations and set up the database. Then use the `seeds.rb` file to create instances of `Student`s and `Cohort`s to so you can test your relationships.
 
-**Once you've successfully created the migration**, work on building out the following deliverables. 
+**Once you've successfully created the migration**, work on building out the following deliverables.
 
 ### Object Relationship Methods
 
@@ -92,15 +92,17 @@ Use Active Record association macros and Active Record query methods where appro
 ### Aggregate and Association Methods
 
 #### Student
+
 - `Student#current_mod`
   - returns the current mod for this student's cohort
 
 #### Cohort
-- `Cohort#add_student` 
+
+- `Cohort#add_student`
   - takes a name (as a `String`) and an age (as an `Integer`) and adds a new student to this cohort
 - `Cohort#average_age`
   - returns the average age of all the students in the cohort as a `Float`
-- `Cohort#total students`
+- `Cohort#total_students`
   - returns the total number of students in the cohort as an `Integer`
 - `Cohort.biggest`
   - returns a `Cohort` instance for the cohort with the most students
@@ -110,6 +112,7 @@ Use Active Record association macros and Active Record query methods where appro
 ## Rubric
 
 ### Active Record Associations
+
 1. No associations, no foreign key on the table.
 2. Associations attempted in the model but are incorrect; foreign key is on a table but in the wrong spot.
 3. Relationships properly created. Associations lead to the correct behavior but may have used the wrong macro or manually written out the methods the macro builds for us.
